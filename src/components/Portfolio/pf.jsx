@@ -26,7 +26,7 @@ const data=[
     name:'ProNix Solutions - Company Website',
     img:img3,
     github:'https://github.com/Raaz-8/',
-    demo:''
+    demo:'https://pronix.vercel.app/'
   },{
     id:4,
     name:'Netflix Clone',
