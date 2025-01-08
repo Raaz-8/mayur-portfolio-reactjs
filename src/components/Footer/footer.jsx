@@ -4,6 +4,8 @@ import logo from '../../assets/pf-logo.png'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {AiFillInstagram} from 'react-icons/ai'
 import {BsTwitter} from 'react-icons/bs'
+import socialLinks from '../../data/socialLinks'
+import { AiFillHeart } from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -21,13 +23,13 @@ const Footer = () => {
       </ul>
 
       <div className='footer_socials'>
-        <a href='https://instagram.com/may_ur_luv' target='_blank'><AiFillInstagram/></a>
-        <a href='https://x.com/may_ur_luv' target='_blank'><BsTwitter/></a>
-        <a href='https://www.linkedin.com/in/mayur-vt/' target='_blank'> <AiFillLinkedin/> </a>
+        <a href={socialLinks.instagram.url} target='_blank'><AiFillInstagram/></a>
+        <a href={socialLinks.X.url} target='_blank'><BsTwitter/></a>
+        <a href={socialLinks.linkedIn.url} target='_blank'> <AiFillLinkedin/> </a>
       </div>
 
       <div className='footer_copy'>
-        <small>&copy; Mayur Vijay Thakur. All Rights Reserved.</small>
+        <small>Made with <AiFillHeart/> by Mayur.</small>
       </div>
 
     </footer>

@@ -2,9 +2,10 @@ import React from 'react'
 import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {AiOutlineInstagram} from 'react-icons/ai'
-import {AiOutlineWhatsApp} from 'react-icons/ai'
+import {AiOutlineLinkedin} from 'react-icons/ai'
 import { useRef } from 'react';
 import emailjs, { send } from 'emailjs-com'
+import socialLinks from '../../data/socialLinks'
 
 const Contact = () => {
   const form=useRef();
@@ -29,21 +30,18 @@ const Contact = () => {
         <div className='contact_options'>
           <article className='contact_option'>
           <MdOutlineEmail/>
-            <h4>Email</h4>
-            <h5>thakur.mayurvcoe@gmail.com</h5>
-            <a href='mailto:thakur.mayurvcoe@gmail.com'>Send Message</a>
+            <h4>{socialLinks.email.title}</h4>
+            <a href={socialLinks.email.url}>Send Mail</a>
+          </article>
+          <article className='contact_option'>
+          <AiOutlineLinkedin/>  
+          <h4>{socialLinks.linkedIn.title}</h4>
+          <a href={socialLinks.linkedIn.url} target='_blank'>Send Message</a>
           </article>
           <article className='contact_option'>
           <AiOutlineInstagram/>
-            <h4>Instagram</h4>
-            <h5>@may_ur_luv</h5>
-            <a href='https://www.instagram.com/may_ur_luv' target='_blank'>Send Message</a>
-          </article>
-          <article className='contact_option'>
-          <AiOutlineWhatsApp/>  
-          <h4>Whatsapp</h4>
-            <h5>+917385372305</h5>
-            <a href='https://api.whatsapp.com/send?phone=7385372305' target='_blank'>Send Message</a>
+            <h4>{socialLinks.instagram.title}</h4>
+            <a href={socialLinks.instagram.url} target='_blank'>Send Message</a>
           </article>
         </div>
 
