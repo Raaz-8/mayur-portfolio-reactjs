@@ -1,11 +1,37 @@
-import React from 'react'
+import React,{ useState , useEffect } from 'react'
 import './about.css'
 import Me from '../../assets/abt-img.png'
+import orgLogo from '../../assets/Tech-Mahindra-Logo.png'
 import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi' 
+import { GoOrganization } from "react-icons/go";
 import { VscFolderLibrary} from 'react-icons/vsc'
 
-const about = () => {
+const About = () => {
+  const abtText="Computer Engineer with honors in AIML, 2023 graduate from Savitribai Phule Pune University. Passionate Software Developer with a strong foundation in software development, gained through training and hands-on experience. Skilled in technologies like PHP, Magento2 and ReactJs, I have worked on diverse projects, delivering innovative solutions. Committed to continuous learning, adaptability, and making impactful contributions in technology.";
+  const abtSubHeader="Software Developer | PHP FullStack | MERN Stack | Designer ";
+
+  
+    const startDate=new Date('2023-11-30');
+    const calcExp=()=>{
+      const currDate=new Date();
+      let years=currDate.getFullYear()-startDate.getFullYear();
+      let months=currDate.getMonth()-startDate.getMonth();
+
+      if(months<0){
+        years-=1;
+        months+=12;
+      }
+
+      return {years, months};
+    };
+
+    const [experience, setExperience] = useState({years:0, months:0});
+    useEffect(()=>{
+      const expData=calcExp();
+      setExperience(expData);
+    },[]);
+  
+
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -22,8 +48,8 @@ const about = () => {
           <div className='about__cards'>
             <article className='about__card'>
               <FaAward className='about__icon'/>
-              <h5>Internship Experience</h5>
-              <small>3+ Months</small>
+              <h5>Experience</h5>
+              <small>{experience.years} year {experience.months} months</small>
             </article>
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
@@ -31,14 +57,14 @@ const about = () => {
               <small>15+ Completed</small>
             </article>
             <article className='about__card'>
-              <FiUsers className='about__icon'/>
-              <h5>Clients</h5>
-              <small>2</small>
+              <GoOrganization className='about__icon'/>
+              <h5>Current Org.</h5>
+              <img src={orgLogo} className='orgLogo' alt='Tech Mahindra'></img>
             </article>
             
           </div>
 
-          <p>Computer Engineer with honors in AIML, 2023 graduate from Savitribai Phule Pune University, with a passion for Web Development and Design. Eager to collaborate on challenging projects and contribute skills in a dynamic environment. Seeking opportunities to apply knowledge and foster innovation in a collaborative setting. <br/>  <br/> <strong>Software Developer | Designer | AIML Enthusiast</strong> </p>
+          <p>{abtText} <br/> <br/> <strong>{abtSubHeader}</strong> </p>
           <a href='#contact' className='btn btn-primary'>Let's Talk</a>
         </div>
         
@@ -47,4 +73,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About
