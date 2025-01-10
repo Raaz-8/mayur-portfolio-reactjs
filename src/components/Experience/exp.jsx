@@ -15,6 +15,13 @@ const Exp = () => {
             <article className='exp_details'>
               <BsPatchCheckFill className="exp_icon"/>
               <div>
+                <h4>PHP</h4>
+              <small>Intermediate</small>
+              </div>
+            </article>
+            <article className='exp_details'>
+              <BsPatchCheckFill className="exp_icon"/>
+              <div>
                 <h4>Python</h4>
               <small>Intermediate</small>
               </div>
@@ -53,6 +60,13 @@ const Exp = () => {
         <div className='exp_db'>
           <h3>Frameworks and Databases</h3>
           <div className='exp_content'>
+          <article className='exp_details'>
+              <BsPatchCheckFill className="exp_icon"/>
+              <div>
+                <h4>Magento2</h4>
+              <small>Beginner</small>
+              </div>
+            </article>
             <article className='exp_details'>
               <BsPatchCheckFill className="exp_icon"/>
               <div>
@@ -65,27 +79,6 @@ const Exp = () => {
               <div>
                 <h4>SQL</h4>
               <small>Intermediate</small>
-              </div>
-            </article>
-            <article className='exp_details'>
-              <BsPatchCheckFill className="exp_icon"/>
-              <div>
-                <h4>Flask</h4>
-              <small>Basic</small>
-              </div>
-            </article>
-            <article className='exp_details'>
-              <BsPatchCheckFill className="exp_icon"/>
-              <div>
-                <h4>MongoDB</h4>
-              <small>Basic</small>
-              </div>
-            </article>
-            <article className='exp_details'>
-              <BsPatchCheckFill className="exp_icon"/>
-              <div>
-                <h4>Tailwind CSS</h4>
-              <small>Experienced</small>
               </div>
             </article>
             <article className='exp_details'>
